@@ -1,0 +1,16 @@
+{
+  "name": "restfil-booker.herokuapp.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.8.1",
+    "dotenv": "^17.2.3",
+    "monocart-reporter": "^2.9.23"
+  }
+}
