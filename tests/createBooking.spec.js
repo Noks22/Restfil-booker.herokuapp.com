@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { BookingPayloads } from '../lib/builders/BookingPayloads.js';
 import { createToken } from '../lib/services/authService.js';
-const { ApiRequests } = require('../lib/services/apiRequests.js');
+import {ApiRequests} from '../lib/services/apiRequests.js';
 
 test('Create Booking Automatically', async () => {
     const payload = new BookingPayloads().createBookingPayload();

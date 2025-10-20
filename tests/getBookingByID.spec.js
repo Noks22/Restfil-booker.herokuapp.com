@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { BookingPayloads } from '../lib/builders/BookingPayloads.js';
-const { ApiRequests } = require('../lib/services/apiRequests.js');
+import {ApiRequests} from '../lib/services/apiRequests.js';
 
 test.describe("Get booking by ID API tests", () => {
     let firstTenBookings = [];

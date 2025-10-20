@@ -1,7 +1,6 @@
 import { test, expect, request } from '@playwright/test';
 import { createToken } from '../lib/services/authService.js';
-const { ApiRequests } = require('../lib/services/apiRequests.js');
-
+import {ApiRequests} from '../lib/services/apiRequests.js';
 
 // test('Delete Already Deleted Booking by ID', async () => {
 

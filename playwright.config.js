@@ -1,15 +1,18 @@
-// @ts-check
+// @js-check
 import { defineConfig, devices } from '@playwright/test';
-const path = require('path');
-const dotenv = require('dotenv');
+
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
+ import dotenv from 'dotenv';
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
+if (!process.env.ENV) {
+    console.warn("ENV not set. Defaulting to 'INT'.")
+    process.env.ENV = 'int'
+}
 
 if (!process.env.CI) {
   const envPath = `./test-data/env/.env.${process.env.ENV}`;
@@ -26,6 +29,7 @@ if (!process.env.CI) {
  */
 export default defineConfig({
   testDir: './tests',
+  testMatch: /.*\.spec\.js/,
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -64,7 +68,7 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+   /* {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -73,7 +77,7 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
-
+*/
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
