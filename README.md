@@ -109,6 +109,6 @@ Playwright HTML report:
     ```
     npx monocart show-report test-results/monocart-report.html`
     ```
-> ⚙️ **Note:** Monocart is already configured in `reporter`.It aggregates run data into a single, modern HTML report.
+>  **Note:** Monocart is already configured in `reporter`.It aggregates run data into a single, modern HTML report.
 
 
