@@ -1,6 +1,6 @@
 Playwright JS — Setup & Execution Guide
 
-This README walks you through configuring and running a Playwright (JavaScript) test project with dotenv environment files and the Monocart HTML reporter. It includes Windows-friendly commands and cross-platform tips.
+This README walks you through configuring and running a Playwright (JavaScript) test project with dotenv environment files and the Monocart HTML reporter.
 
 **1) Prerequisites**
 
